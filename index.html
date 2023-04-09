@@ -2,49 +2,76 @@
 <html>
 <head>
     <style>
-    body
-    {
-        background:url();
-        background-size: cover;
-    }
+		*{ margin: 0; padding: 0; font-family: "微软雅黑"}
+		body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd { margin: 0px; padding: 0px; font-size: 14px; font-weight: normal;}
+		img { border-style: none;}
+		li{ list-style: none; float: left}
+		a{ text-decoration: none}
+		.baidu{
+			height: 110px;
+		}
+		.body{
+		width: 100%;
+		height: auto;
+		z-index: 1;
+		}
+		.content{
+		width: 1100px;
+		overflow: hidden;
+		margin: 30px auto;
+		}
+		.jianjie{
+		width: 1170px;
+		z-index: 1;
+		}
+		.jj-list{
+		margin-right: 25px;
+		margin-bottom: 20px;
+		background-color: #fff;
+		z-index: 1;
+		}
+		.jj-list-tit{
+		font-size: 17px;
+		font-weight: bolder;
+		line-height: 25px;
+		color: #555;
+		padding-left: 4px;
+		z-index: 1;
+		}
+		.jj-list-con{
+		overflow: hidden;
+		z-index: 1;
+		}
+		.jj-list-con li{
+		width: 110px;
+		margin: 3px 3px;
+		}
+		.link-3{
+		display: block;
+
+		color: #555;
+		font-size: 13px;
+		text-align: center;
+		line-height: 35px;
+		padding: 4px 0;
+		border-radius: 2px;
+		transition: all 0.2s;
+		z-index: 1;
+		}
+		.link-3:hover{
+		color: blue;
+		font-weight: bolder;
+		}
     </style>
-    <!--自定义背景图：把上面url()的链接换成你的图片链接，必须是公开图片，可以使用 图床 -->
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<base target="_blank">
+	<meta charset="UTF-8">
 	<title>简约导航</title>
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-	<meta content="telephone=no,email=no" name="format-detection">
-	<meta content="yes" name="apple-mobile-web-app-capable">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<meta name="apple-touch-fullscreen" content="yes" />
-	<meta name="keywords" content="网址导航" />
-	<meta name="description" content="一个简单美观可自定义的网址导航" />
-	<link rel="shortcut icon" href="favicon.ico">
-	<!-- 注意！为了优化演示站访问速度下方两行引用的是CDN上的CSS文件地址，请修改为自己的样式文件地址 -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/appexplore/jianavi/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/appexplore/jianavi/css/yidong.css" />
-	<!-- 本项目开源地址：https://github.com/appexplore/jianavi 请勿完全抄袭源码，请勿声明自己是原创 -->
 </head>
-<body style="background-color:SlateGray;">
+<body style="background-color:#f2f4f7;">
 <body>
 
 	<!-- 搜索栏start -->
-	<div class="baidu baidu-2">
-		<form name="f" action="https://www.baidu.com/s" target="_blank">
-			<div class="Select-box-2" id="baidu">
-				<ul>
-					<li class="this_s">百 度</li>
-					<li class="bing_s">必 应</li>
-					<li class="baidu_s">百 度</li>
-				</ul>
-			</div>
-			<div class="in5">
-				<input name="wd" id="kw-2" maxlength="100" autocomplete="off" type="text">
-				<div class="qingkong" id="qingkong" title="清空">x</div>
-			</div>
-			<input value="搜 索" id="su-2" type="submit">
-		</form>
-		<ul class="keylist"></ul>
+	<div class="baidu">
 	</div>
 	<!-- 搜索栏end -->
 
@@ -56,116 +83,91 @@
 					<div class="jj-list-tit">学习 · 工作</div>
                     <!-- 这里当然可以取你想要的名字啦，下面那几个也是一样的 -->
 					<ul class="jj-list-con">
-						<li><a href="https://www.w3school.com.cn/" class="link-3" target="_blank" rel="nofollow">W3school</a></li>
+						<li><a href="https://www.w3school.com.cn/" class="link-3"  rel="nofollow">W3school</a></li>
                         <!-- 添加网站：herf=""里面改成要添加的网址，中间夹的汉字改成你想要的名字 -->
-						<li><a href="https://www.runoob.com/" class="link-3" target="_blank" rel="nofollow">菜鸟教程</a></li>
-						<li><a href="http://doyoudo.com/free" class="link-3" target="_blank" rel="nofollow">doyoudo</a></li>
-						<li><a href="http://read.nlc.cn" class="link-3" target="_blank" rel="nofollow">读者云门户</a></li>
-						<li><a href="https://eduyun.cn/" class="link-3" target="_blank" rel="nofollow">智慧中小学</a></li>
-						<li><a href="https://www.xuetangx.com/" class="link-3" target="_blank" rel="nofollow">学堂在线</a></li>
-						<li><a href="https://1s1k.eduyun.cn/" class="link-3" target="_blank" rel="nofollow">一师一优</a></li>
-						<li><a href="http://zs.greengarden.org.cn/" class="link-3" target="_blank" rel="nofollow">中少快乐阅读平台</a></li>										
-						<li><a href="https://kids.bjadks.com/" class="link-3" target="_blank" rel="nofollow">乐于学</a></li>
+						<li><a href="https://www.runoob.com/" class="link-3"  rel="nofollow">菜鸟教程</a></li>
+						<li><a href="http://doyoudo.com/free" class="link-3"  rel="nofollow">doyoudo</a></li>
+						<li><a href="http://read.nlc.cn" class="link-3"  rel="nofollow">读者云门户</a></li>
+						<li><a href="https://eduyun.cn/" class="link-3"  rel="nofollow">智慧中小学</a></li>
+						<li><a href="https://www.xuetangx.com/" class="link-3"  rel="nofollow">学堂在线</a></li>
+						<li><a href="https://1s1k.eduyun.cn/" class="link-3"  rel="nofollow">一师一优</a></li>
+						<li><a href="http://zs.greengarden.org.cn/" class="link-3"  rel="nofollow">中少快乐阅读平台</a></li>										
+						<li><a href="https://kids.bjadks.com/" class="link-3"  rel="nofollow">乐于学</a></li>
 					</ul>
 				</div>
 				<div class="jj-list">
 					<div class="jj-list-tit">常用 · 导航</div>
 					<ul class="jj-list-con">
-						<li><a href="https://axutongxue.gitee.io/" class="link-3" target="_blank" rel="nofollow">阿虚</a></li>
-						<li><a href="https://dlidli.wang/" class="link-3" target="_blank" rel="nofollow">嘀哩</a></li>
-						<li><a href="https://www.zhihu.com/" class="link-3" target="_blank" rel="nofollow">知乎</a></li>
-						<li><a href="https://www.bilibili.com/" class="link-3" target="_blank" rel="nofollow">B站</a></li>
-						<li><a href="https://www.bilibili.com/" class="link-3" target="_blank" rel="nofollow">B站</a></li>
-						<li><a href="https://www.xue8nav.com/" class="link-3" target="_blank" rel="nofollow">学吧</a></li>
-						<li><a href="https://github.com/" class="link-3" target="_blank" rel="nofollow">GitHub</a></li>
-						<li><a href="https://gitee.com/" class="link-3" target="_blank" rel="nofollow">Gitee</a></li>
-						<li><a href="https://tophub.today/" class="link-3" target="_blank" rel="nofollow">今日热榜</a></li>
+						<li><a href="https://axutongxue.gitee.io/" class="link-3"  rel="nofollow">阿虚</a></li>
+						<li><a href="https://dlidli.wang/" class="link-3"  rel="nofollow">嘀哩</a></li>
+						<li><a href="https://www.zhihu.com/" class="link-3"  rel="nofollow">知乎</a></li>
+						<li><a href="https://www.bilibili.com/" class="link-3"  rel="nofollow">B站</a></li>
+						<li><a href="https://www.bilibili.com/" class="link-3"  rel="nofollow">B站</a></li>
+						<li><a href="https://www.xue8nav.com/" class="link-3"  rel="nofollow">学吧</a></li>
+						<li><a href="https://github.com/" class="link-3"  rel="nofollow">GitHub</a></li>
+						<li><a href="https://gitee.com/" class="link-3"  rel="nofollow">Gitee</a></li>
+						<li><a href="https://tophub.today/" class="link-3"  rel="nofollow">今日热榜</a></li>
 					</ul>
 				</div>
 				<div class="jj-list">
 					<div class="jj-list-tit">生活 · 娱乐</div>
 					<ul class="jj-list-con">
-						<li><a href="https://www.jd.com/" class="link-3" target="_blank" rel="nofollow">京东</a></li>
-						<li><a href="https://www.taobao.com/" class="link-3" target="_blank" rel="nofollow">淘宝</a></li>
-						<li><a href="https://www.smzdm.com/" class="link-3" target="_blank" rel="nofollow">什么值得买</a></li>
-						<li><a href="https://www.msdmanuals.cn/" class="link-3" target="_blank" rel="nofollow">默沙东</a></li>
-						<li><a href="https://www.mvyxws.com/" class="link-3" target="_blank" rel="nofollow">医学微视</a></li>
-						<li><a href="https://xueqiu.com/" class="link-3" target="_blank" rel="nofollow">雪球</a></li>
-						<li><a href="https://qieman.com/dashboard" class="link-3" target="_blank" rel="nofollow">且慢</a></li>
-						<li><a href="https://tool.liumingye.cn/music/?page=searchPage#/" class="link-3" target="_blank" rel="nofollow">MyFreeMP3</a></li>
-						<li><a href="https://www.dygang.cc/" class="link-3" target="_blank" rel="nofollow">电影港</a>
+						<li><a href="https://www.jd.com/" class="link-3"  rel="nofollow">京东</a></li>
+						<li><a href="https://www.taobao.com/" class="link-3"  rel="nofollow">淘宝</a></li>
+						<li><a href="https://www.smzdm.com/" class="link-3"  rel="nofollow">什么值得买</a></li>
+						<li><a href="https://www.msdmanuals.cn/" class="link-3"  rel="nofollow">默沙东</a></li>
+						<li><a href="https://www.mvyxws.com/" class="link-3"  rel="nofollow">医学微视</a></li>
+						<li><a href="https://xueqiu.com/" class="link-3"  rel="nofollow">雪球</a></li>
+						<li><a href="https://qieman.com/dashboard" class="link-3"  rel="nofollow">且慢</a></li>
+						<li><a href="https://tool.liumingye.cn/music/?page=searchPage#/" class="link-3"  rel="nofollow">MyFreeMP3</a></li>
+						<li><a href="https://www.dygang.cc/" class="link-3"  rel="nofollow">电影港</a>
 						</li>
 					</ul>
 				</div>
 				<div class="jj-list">
 					<div class="jj-list-tit">发现 · 世界</div>
 					<ul class="jj-list-con">
-						<li><a href="https://news.ifeng.com/" class="link-3" target="_blank" rel="nofollow">凤凰资讯</a></li>
-						<li><a href="https://ef.zhiweidata.com/#!/index" class="link-3" target="_blank" rel="nofollow">知微事见</a></li>
-						<li><a href="https://sspai.com/" class="link-3" target="_blank" rel="nofollow">少数派</a></li>
-						<li><a href="https://jikipedia.com/" class="link-3" target="_blank" rel="nofollow">小鸡词典</a></li>
-						<li><a href="https://jandan.net/" class="link-3" target="_blank" rel="nofollow">煎蛋</a></li>
-						<li><a href="https://youquhome.com/" class="link-3" target="_blank" rel="nofollow">有趣网址</a></li>
-						<li><a href="https://zhuxiao.wiki/" class="link-3" target="_blank" rel="nofollow">注销指南</a></li>
-						<li><a href="https://houxu.app/" class="link-3" target="_blank" rel="nofollow">后续</a></li>
-						<li><a href="https://ac.scmor.com/" class="link-3" target="_blank" rel="nofollow">思谋学术</a></li>
+						<li><a href="https://news.ifeng.com/" class="link-3"  rel="nofollow">凤凰资讯</a></li>
+						<li><a href="https://ef.zhiweidata.com/#!/index" class="link-3"  rel="nofollow">知微事见</a></li>
+						<li><a href="https://sspai.com/" class="link-3"  rel="nofollow">少数派</a></li>
+						<li><a href="https://jikipedia.com/" class="link-3"  rel="nofollow">小鸡词典</a></li>
+						<li><a href="https://jandan.net/" class="link-3"  rel="nofollow">煎蛋</a></li>
+						<li><a href="https://youquhome.com/" class="link-3"  rel="nofollow">有趣网址</a></li>
+						<li><a href="https://zhuxiao.wiki/" class="link-3"  rel="nofollow">注销指南</a></li>
+						<li><a href="https://houxu.app/" class="link-3"  rel="nofollow">后续</a></li>
+						<li><a href="https://ac.scmor.com/" class="link-3"  rel="nofollow">思谋学术</a></li>
 					</ul>
 				</div>
 				<div class="jj-list">
 					<div class="jj-list-tit">在线 · 工具</div>
 					<ul class="jj-list-con">
-						<li><a href="https://www.photopea.com/" class="link-3" target="_blank" rel="nofollow">在线修图</a></li>
-						<li><a href="https://cowtransfer.com/" class="link-3" target="_blank" rel="nofollow">收发文件</a></li>
-						<li><a href="https://cli.im/" class="link-3" target="_blank" rel="nofollow">二维码</a></li>
-						<li><a href="https://www.linshiyouxiang.net" class="link-3" target="_blank" rel="nofollow">临时邮箱</a></li>
-						<li><a href="https://www.materialtools.com/" class="link-3" target="_blank" rel="nofollow">临时短信</a></li>
-						<li><a href="https://convertio.co/zh/" class="link-3" target="_blank" rel="nofollow">格式转换</a></li>
-						<li><a href="http://www.hiwenku.com/" class="link-3" target="_blank" rel="nofollow">文档下载</a></li>
-						<li><a href="https://weibomiaopai.com/" class="link-3" target="_blank" rel="nofollow">视频下载</a></li>
-						<li><a href="https://www.eggvod.cn/music/" class="link-3" target="_blank" rel="nofollow">音乐下载</a></li>
+						<li><a href="https://www.photopea.com/" class="link-3"  rel="nofollow">在线修图</a></li>
+						<li><a href="https://cowtransfer.com/" class="link-3"  rel="nofollow">收发文件</a></li>
+						<li><a href="https://cli.im/" class="link-3"  rel="nofollow">二维码</a></li>
+						<li><a href="https://www.linshiyouxiang.net" class="link-3"  rel="nofollow">临时邮箱</a></li>
+						<li><a href="https://www.materialtools.com/" class="link-3"  rel="nofollow">临时短信</a></li>
+						<li><a href="https://convertio.co/zh/" class="link-3"  rel="nofollow">格式转换</a></li>
+						<li><a href="http://www.hiwenku.com/" class="link-3"  rel="nofollow">文档下载</a></li>
+						<li><a href="https://weibomiaopai.com/" class="link-3"  rel="nofollow">视频下载</a></li>
+						<li><a href="https://www.eggvod.cn/music/" class="link-3"  rel="nofollow">音乐下载</a></li>
 					</ul>
 				</div>
 				<div class="jj-list">
 					<div class="jj-list-tit">搜索 · 资源</div>
 					<ul class="jj-list-con">
-						<li><a href="https://yandex.com/" class="link-3" target="_blank" rel="nofollow">Yandex</a></li>
-						<li><a href="https://wx.sogou.com/" class="link-3" target="_blank" rel="nofollow">搜狗微信</a></li>
-						<li><a href="https://www.jiumodiary.com/" class="link-3" target="_blank" rel="nofollow">鸠摩搜书</a></li>
-						<li><a href="https://feiyu100.cn/" class="link-3" target="_blank" rel="nofollow">飞鱼盘搜</a></li>
-						<li><a href="https://pan.qianfan.app/" class="link-3" target="_blank" rel="nofollow">千帆搜索</a></li>
-						<li><a href="https://www.alipansou.com/" class="link-3" target="_blank" rel="nofollow">猫狸盘搜</a></li>
-						<li><a href="https://u.gitcafe.net/" class="link-3" target="_blank" rel="nofollow">小纸条</a></li>
-						<li><a href="https://www.panyoubbs.com/" class="link-3" target="_blank" rel="nofollow">阿里盘友</a></li>
-						<li><a href="https://yunpan1.com/" class="link-3" target="_blank" rel="nofollow">阿里资源分享</a></li>
+						<li><a href="https://yandex.com/" class="link-3"  rel="nofollow">Yandex</a></li>
+						<li><a href="https://wx.sogou.com/" class="link-3"  rel="nofollow">搜狗微信</a></li>
+						<li><a href="https://www.jiumodiary.com/" class="link-3"  rel="nofollow">鸠摩搜书</a></li>
+						<li><a href="https://feiyu100.cn/" class="link-3"  rel="nofollow">飞鱼盘搜</a></li>
+						<li><a href="https://pan.qianfan.app/" class="link-3"  rel="nofollow">千帆搜索</a></li>
+						<li><a href="https://www.alipansou.com/" class="link-3"  rel="nofollow">猫狸盘搜</a></li>
+						<li><a href="https://u.gitcafe.net/" class="link-3"  rel="nofollow">小纸条</a></li>
+						<li><a href="https://www.panyoubbs.com/" class="link-3"  rel="nofollow">阿里盘友</a></li>
+						<li><a href="https://yunpan1.com/" class="link-3"  rel="nofollow">阿里资源分享</a></li>
 					</ul>
 				</div>
 			</div>
-			<!-- 内容end -->
-
-			<!-- 底部版权start -->
-			<!-- 开源不易，请保留下方本项目开源地址 -->
-			<!-- 如果您不愿意保留下方本项目开源地址，请打赏并留言您的网址 >> https://afdian.net/@appts -->
-
-			<div class="footer1">Copyright © 2021
-				<a href="https://www.appts.cn/" style="color:#ffffff;" target="_blank" rel="nofollow">软件探索 </a>
-				<!-- 请保留下方开源地址-->
-				<a href="https://github.com/appexplore/jianavi" style="color:#ffffff;" target="_blank"
-					rel="nofollow">开源 </a>
-			</div>
-		</div>
-
-			<div class="footer">Copyright © 2021
-				<a href="https://www.appts.cn/" style="color:#ffffff;" target="_blank" rel="nofollow">软件探索 </a>
-				<!-- 请保留下方开源地址-->
-				<a href="https://github.com/appexplore/jianavi" style="color:#ffffff;" target="_blank"
-					rel="nofollow">开源 </a>
-			</div>
-			<!-- 底部版权end -->
+		</div>	
 	</div>
-
-	<!-- 注意！为了优化演示站访问速度下方两行引用的是CDN上的js文件地址，请修改为自己的样式文件地址 -->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/appexplore/jianavi/js/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/appexplore/jianavi/js/js.min.js"></script>
 </body>
-
 </html>
